@@ -1,0 +1,692 @@
+/* CSS stylesheet behorend bij dedoofpotgeneraal.nl */
+
+/* Voor vaste maten van blokken */
+html           {box-sizing:border-box}
+*,*:before,*:after{box-sizing:inherit;}
+
+/* Voor vervagingseffect aan begin */
+body           {opacity:1;transition:2.5s;animation:kleuren 0s linear 1 forwards;}
+body.fade-out  {opacity:0;transition:none;}
+@keyframes kleuren {from {background:#FAFAFA;} to {background:#E8E8E8;}}
+
+/* CSS voor de gefixeerde header */
+.header        {position:sticky;left:0;top:0;z-index:100 !important;  /* Hoog genoeg om boven video/content te blijven */}
+
+/* Fix overlap met sticky header: Header altijd bovenop */
+/* Zorg dat video-sectie lager zit */
+.graybar {
+  position: relative;  /* Voorkom dat tabel uit context breekt */
+  z-index: 1;  /* Lager dan header */
+  background:#F8F8F8;border-radius:3px 3px 0px 0px;
+}
+
+.table  {width:100%;max-width:970px;margin:0 auto;border-collapse:separate;border-spacing:0;}
+.label2  {font-size:9pt;line-height:1.25;max-width:140px;hyphens:none;position:relative;top:-58;color:#000000;font-size:18pt;}
+.infographicline3  {stroke:black;stroke-width:0.5;stroke-linecap:round;}
+.groktweets        {max-width:999px;min-width:999;margin:12 0 7 30;border: solid 0.5px #CCCCCC;display:inline-block;
+                    background-image:linear-gradient(-110deg, #F0F1F2, #D8D9DA 100%);border-radius:3px;height:220;}
+.vimeos            {max-width:999px;min-width:999;margin:18 0  7 30;border: solid 0.5px #CCCCCC;display:inline-block;
+                    background-image:linear-gradient(-110deg, #F0F1F2, #D8D9DA 100%);border-radius:3px;height:220;}
+
+.vimeo, .vimeo2 {
+  z-index: 2 !important;  /* Iframe expliciet lager */
+  border-radius:3px;
+  position:relative;
+  pointer-events: auto;  /* Zorg dat iframe clicks vangt */
+}
+
+/* Voor de geneste positioned divs in video (top:-25px etc.) */
+div[style*="top:-25px"], div[style*="top:-24px"] {
+  z-index: 1 !important;
+  pointer-events: none;  /* Selecteer de specifieke positioned divs */
+}
+
+
+.flag-emoji {
+  width: 20px;  /* Match emoji-breedte; pas aan als je vlaggen 16px of 24px zijn */
+  height: 15px; /* Standaard vlagverhouding ~4:3; test op je site */
+  vertical-align: middle; /* Lijnt uit met tekst, net als emojis */
+  margin-right: 4px; /* Ruimte naar tekst, zoals bij inline emojis */
+  border-radius: 2px; /* Subtiel afgerond voor emoji-look (optioneel) */
+  object-fit: cover; /* Houdt verhoudingen intact bij resize */
+  display: inline-block; /* Voorkomt baseline-shift */
+}
+
+/* Voor correcte interne hyperlinks */
+.anchor        {display:block;height:55px;margin-top:-55px;visibility:hidden;}
+
+/* voor de headers */
+.languagebar   {background-image:linear-gradient(110deg, #52565D, #52565D 100%);border-radius:3px;}
+.blurbbar      {background-image:radial-gradient(circle, #4B4B58, #3B3B44);border-radius:3px;}
+.menubar       {background-image:linear-gradient(110deg, #2B2B34, #2B2B34 100%);}
+.authorbar, .authorbar2  {box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);border-radius:3px;}
+.authorbar     {background-image:linear-gradient(to left, #373B3F 0%, #34383C 40%, #373B3F 100%);}
+.authorbar2    {background:#F8F8F8;}
+.synopsisbar   {background-image:linear-gradient(110deg, #494C50, #494C50 45%, #2B2B34 75%, #2B2B34 100%);margin-left:auto;margin-right:auto;}
+.whitebar      {background-color:#D0D0D0;}
+.boxshadow     {box-shadow:0 10px 16px 0 rgba(0,0,0,0.1), 0px 76px 52px -82px rgba(0,0,0,1);}
+.boxshadow2    {box-shadow:0px 25px 30px -30px rgba(0,0,0,0.7);}
+.boxshadow3    {box-shadow:0px 25px 30px -30px rgba(0,0,0,0.3);}
+
+/* voor andere kleuren */
+.kleur6        {background:#2B2B34;border-radius:3px;}
+.kleur8        {background-image:linear-gradient(110deg, #C00000, #B00000 100%);}
+.kleur35       {background-image:radial-gradient(circle, #FBFDFF, #A0A2A4);border-radius:3px;border-top:solid 5px #B00000;border-bottom:solid 5px #B00000;}
+.kleur35:hover {background-image:radial-gradient(circle, #F00000, #D50000);}
+.kleur36       {background-image:radial-gradient(circle, #D00000, #900000);border-radius:3px;border-top:solid 5px #A00000;border-bottom:solid 5px #A00000;}
+.kleur36:hover {background-image:radial-gradient(circle, #F00000, #D50000);}
+.red           {color:#B00000}
+.white         {color:#FFFFFF}
+.black         {background:#333333;}
+
+.kleur39       {background-image:radial-gradient(circle, #4E5254, #424649);vertical-align:middle;border:solid 0.5px #AEB6BF;border-radius:0 3px 3px 0;}
+.kleur41       {background-image:radial-gradient(circle, #F4F5F6, #E4E5E6);border-radius:3px;}
+.kleur43       {background-image:radial-gradient(circle, #D7DDE0, #C5C9CD);border-radius:3px;}
+.kleur44       {background-image:radial-gradient(circle, #CCD1D5, #C5C9CD);border-radius:3px;}
+.kleur45       {background:#F8F8F8;;border-radius:3px;}
+.kleur46       {background-image:radial-gradient(circle, #F0F1F2, #E4E5E6);border-radius:3px;}
+
+/* Voor de tabellen */
+.box           {border-radius:3px;}
+.box2          {border-radius:3 3 0 0;}
+
+/* Voor headers en alinea's */
+h1            {color:#000000;filter:url(#f3);font-weight:normal;font-family:"Helvetica","Arial";}
+h2            {color:#222222;filter:url(#f3);margin:36px 0 1px 33px;font-weight:normal;font-family:"Helvetica","Arial";font-size:19.5pt;letter-spacing:0.6px;z-index:1;}
+p             {margin:0 0 0 0;font-family:"Helvetica","Arial";color:#000000;font-size:11pt;}
+
+a:link, a:visited {color:#000000;text-decoration-color:#000000;}
+a:hover           {color:#800000;box-shadow:0 4px 10px 0 rgba(20,0,0,0.2);}
+a:active          {color:#800000;}
+
+.languagebar a.link,
+.container5 a.link {
+  cursor: pointer !important;
+}
+
+a.redlink:link, a.redlink:visited {color:#900000;text-decoration:none;}
+a.redlink:hover   {color:#900000;}
+a.redlink:active  {color:#900000;}
+
+a.redlinkD:link, a.redlinkD:visited {color:#900000;text-decoration:underline;}
+a.redlinkD:hover   {color:#900000;}
+a.redlinkD:active  {color:#900000;}
+
+a.whitelink:link, a.whitelink:active, a.whitelink:visited {color:#CCCCCC;word-break:break-all; hyphens:none;}
+a.whitelink:hover {color:#FA8072;box-shadow:0 4px 10px 0 rgba(20,0,0,0.2);}
+a.noshadow        {box-shadow:none;}
+a.citations       {box-shadow:none;text-decoration:none;}
+.redbox           {text-decoration:none;box-shadow:none;}
+
+sup            {font-size:80%;top:-0.4em;}
+table          {border-spacing:0;border:none;}
+td             {padding:0px;vertical-align:top;}
+.taal          {display:inline-block;position:relative;left:3px;filter:grayscale(0.2);}
+.taalsvg       {display:inline-block;width:18px;position:relative;top:-3px;left:-5px;transform:scale(.95);}
+.style1        {font-size:14.5;margin-left:21px;font-family:"Helvetica","Arial";position:relative;top:-0.5;}
+.style2        {font-size: 9.1;margin-left:21px;font-family:"Helvetica","Arial";display:none;}
+.style3        {position:relative;top:0;line-height:74%;}
+
+.kop1          {display:inline;z-index:1;position:relative;top:  23px;left:22px;font-size:9pt;}
+.kop2          {display:inline;z-index:1;position:relative;top:  -3px;color:#222222;filter:url(#f3);}
+.smal2         {display:inline;}
+
+.inspring      {margin-left:2.5em;}
+.hoofd         {margin-left:17pt;text-align:justify;line-height:135%;hyphens:auto;font-size:11.5pt;}
+.margintop     {margin-top:12;}
+.tekst         {margin:5.5pt 18pt 0pt 18pt;text-align:justify;hyphens:auto;line-height:125%;}
+.kop           {margin: 18pt  8pt 8pt 18pt;text-align:left;line-height:125%;font-size:15pt;font-weight:normal;filter:url(#f3);}
+.star          {color:goldenrod;font-size:13.4pt;margin-left:0.5px;letter-spacing:0.05em;filter:url(#f4);}
+.auteurtxt     {color:black;line-height:135%;font-size:11.5pt;hyphens:auto;margin-top:10px;}
+.auteurfoto    {margin:10 40 0 22;font-size:11.3pt;hyphens:none;text-align:left;line-height:126%;font-style:italic;}
+.portretcirkel {border:solid 1px #AAAAAA;width:262;border-radius:0.5%;box-shadow: 3px 6px 10px 0 rgba(0,0,0,0.3);margin:3 0 0 22;border-radius:3px;}
+.auteurstyle   {margin:38 0 24 306}
+.thumbs        {width:460px;height:259px;}
+.thumbsdiv     {transform:scale(0.71);position:relative;top:-26px;left:-47px;}
+
+.mediastyle, .mediastylekop, .mediastylekopje, .mediastyle1, .mediastyle2, .mediastyle3
+                 {font-size:11.5pt;line-height:135%;text-align:justify;hyphens:auto;margin:10px 19pt 0px 18pt;}
+.mediastylekop   {font-size:17.5pt;margin-top:10;hyphens:none;text-align:left;}
+.mediastylekopje {font-size:118%;margin-top:18px;font-style:italic;}
+.mediastyle1     {font-size:96%;}
+.mediastyle2     {font-size:13.5;margin-top:7;margin-left:27;   color:#292929;}
+.mediastyle3     {font-size:13.5;margin-top:-18.2;margin-left:455.5;color:#292929;}
+
+/* Forceer handcursor voor ALLE links in de Grok-sectie */
+.groktweets a {
+    cursor: pointer !important;
+}
+
+.citatenintro  {margin:4px 26px 0px 25px;font-size:11.5pt;line-height:135%;text-align:justify;hyphens:auto;}
+.vlaggetje     {font-size:11.3pt;position:relative;top:0.8;}
+.kleinvlaggetje  {font-size:9pt;position:relative;top:0.8;}
+.kleinvlaggetje2 {font-size:16;position:relative;top:1.5;}
+.blurbstyle    {margin:23.5pt 18pt 25pt 18pt;font-size:11.5pt;color:#FFFFFF;text-align:center;filter:url(#f1);letter-spacing:0.1px;line-height:130%;}
+.creditsstyle, .bronstyle  {font-size:6.5pt;text-align:justify;text-transform:uppercase;hyphens:auto;color:#EEEEEE;}
+.lastlinestyle {font-size:10pt;text-transform:uppercase;color:#FFFFFF;letter-spacing:.1px;position:relative;top:0.8px;}
+.padd          {padding:2.5px  3px 3.5px 3.5px;}
+.padd2         {padding:2.5px 15px 3.5px  15px;}
+
+.meer1         {width:20px;height:20px;position:relative;left:0.5px;top:-0.5px;}
+.meer2         {fill:none;stroke:#900000;stroke-width:2.5px;}
+
+/* voor de afbeeldingen */
+.avatar, .icon           {width:78px;height:78px;position:relative;transform:scale(0.54);top:-17px;left:-15.2px;}
+
+/* Voor de kleuren bij het selecteren van tekst */
+::selection {color:white;background:#52565D;}
+
+/* Voor de quotes, indeling in 4 kolommen en 2 achtergrondkleuren */
+.col1       {margin: 11.5pt  0pt 0   0;}
+.col2a      {margin: 16.5pt 18pt 0 17pt;color:#000000;font-size:10.5pt;line-height:122%;text-indent:-0.5px;}
+.col2b      {margin:    1pt 18pt 0 17pt;color:#000000;font-size:10.5pt;line-height:122%;text-indent:19.4}
+.col3       {margin: 11.5pt  0pt 0   0;}
+.col4       {margin:  1.3pt 18pt 0 17.5pt;color:#800000;font-size:7.5pt;line-height:120%;}
+p.col4      {opacity:0;transition:opacity 0.4s ease;}
+
+.sectie     {margin-left:auto;margin-right:auto;border-radius:19pt;overflow:hidden;border:#CCCCCC solid 0.5px;
+             box-shadow:0px -25px 30px -30px rgba(0,0,0,0.35), 0px 25px 30px -30px rgba(0,0,0,0.35),
+                        6px   0px 30px -30px rgba(0,0,0,0.35),-6px  0px 30px -30px rgba(0,0,0,0.35);}
+.ttd1       {width: 30px;padding:10px 0 10px    0;}
+.ttd2       {width:305px;hyphens:auto;}
+.table2     {height:246px;width:100%;background:#FFFFFF;}
+.table1     {height:246px;width:100%;background-image:linear-gradient(135deg, #E7E7E7, #E7E7E7 50%, #FAFAFA 100%);}
+.tableDEU   {height:290px;}
+.tablehead  {width:100%;filter:grayscale(0.4);background-image:linear-gradient(to right, #3A4A64, #5A6A84);}
+.tableheader {margin:21px 0 8px 27px;color:#FFFFFF;font-size:12.6pt;font-weight:normal;text-transform:uppercase;}
+.tabletext   {margin:0px 17px 19.5px 27px;color:#FFFFFF;font-size:11.5pt;font-style:italic;}
+.tablewidth  {width:55.3pt}
+
+.svgicon1   {width:120;height:120;position:relative;left:-11;top:5;}
+.svgicon2   {width:120;height:120;position:relative;left:-33;top:-37px;}
+.svgrect1   {fill:url(#grad1);filter:url(#f2);z-index:0;cx:61;cy:52;r:38;transform-origin: center;}
+.svgrect2   {fill:url(#grad1);filter:url(#f2);z-index:0;cx:148;cy:102;r:85;}
+.svgrect3   {fill:#52565D;z-index:1;stroke:#000000;stroke-width:0.5px;}
+.number     {fill:white;font-size:11.5pt;font-weight:normal;font-type:italic;}
+.hidden     {position:relative;top:-7px;left:9px;display:inline-block;}
+.svgicon3   {width:100px;height:100px;position:relative;left:-7.5pt;top:-8.5px;}
+.svgicon4   {stroke:#AEB6BF;stroke-width:1px;fill:url(#grad1);filter:url(#f2);}
+.svgicon5   {stroke:#800000;stroke-width:5px;fill:none;}
+
+.svgiconN   {width:130;height:130;position:relative;left:-11;top:-10;}
+.svgrectN   {filter:url(#f2);z-index:1;cx:61;cy:53.5;r:24;fill:#1A2A44;stroke:#111115;stroke-width:0.5px;}
+.svgtextN   {fill:#FFFFFF;font-size:35;}
+
+/* Oplossing van Grok voor dode hoek bij hover */
+table.table1:hover p.col4, table.table2:hover p.col4 {opacity: 1;}
+td.ttd2:hover p.col4 {opacity: 1;}
+td.ttd1:hover ~ td.ttd2 p.col4 {opacity: 1;}
+.hidden, .icon, .avatar, img.icons, img.sprite {pointer-events: none;}
+
+/* Voor de buttons */
+button              {font-family:"Helvetica","Arial";}
+.taalbutton, .taalbuttonX {background-image:linear-gradient(110deg, #BBBBBB, #939393 100%);color:#000000;text-align:left;height:24px;
+                     cursor:pointer;border-radius:2px;padding:5px 10px;
+                     border:solid 0.5pt #666666;margin-right:2.5px;text-decoration:#FAFAFA;font-family:"Helvetica","Arial";}
+.taalbuttonX        {background-image:linear-gradient(110deg, #EEEEEE, #DDDDDD 100%);
+                     box-shadow:1.5px 0 5px 0 #E9E9E9, -1.5px 0 5px 0 #E9E9E9;pointer-events:none;}
+.taalbutton:hover   {background:#F00000;color:#FFFFFF;box-shadow: 0 0 7px 0 #FAFAFA;}
+.taalbutton:focus   {outline:none;border:solid 0.5pt #FFFFFF;}
+.menubutton, .downloadbutton {background:#52565D;color:#FFFFFF;text-align:center;font-size:14.8px;
+                     transition:transform 0.2s;text-decoration:none;cursor:pointer;border-radius:2px;border:hidden 3px #680000;
+                     margin-right:2px;padding:7.5px 13px;font-family:"Helvetica","Arial";}
+.menubutton:focus   {outline:none;border:solid 0.5pt #FFFFFF;}
+.menubutton:hover   {background:#F00000;color:#FFFFFF;box-shadow: 0 0 7px 0 #FAFAFA;}
+.downloadbutton       {background:#C00000;}
+.downloadbutton:focus {outline:none;border:solid 0pt #FF0000;}
+.downloadbutton:hover {background:#FF0000;color:#FFFFFF;box-shadow: 0 0 7px 0 #FAFAFA;}
+.bestelbutton {background:#C00000;transition:transform 0.3s;color:#FAFAFA;padding:2px 17px;text-align:center;
+                     font-size:16px;border:solid 0.5pt #800000;text-decoration:none;cursor:pointer;border-radius:40px;letter-spacing:.5pt;font-family:"Helvetica","Arial";
+                     position:relative;top:0.6px;}
+.bestelbutton:hover {background:#FF0000;color:#FFFFFF;}
+.bestelbutton:focus {outline:none;border:solid 0.5pt #FF0000;}
+
+.button1, .button2  {background-image:linear-gradient(110deg, #C00000, #B00000 100%);transition:transform 0.3s;color:#FAFAFA;padding:0px 6px 2px 6px;
+                     text-align:center;font-size:14px;text-decoration:none;cursor:pointer;border-radius:40px;border: solid 0.5pt #800000;font-family:"Helvetica","Arial";}
+.button1:hover, .button2:hover {background-image:linear-gradient(110deg, #F00000, #F00000 100%);color:#FFFFFF;}
+.button1:focus      {outline:none;border:solid 0.5pt #FF0000;}
+.button2            {padding:2.5px 19px 2px 19px;font-size:11.7px;}
+
+.tagbutton, .tagbuttonENG, .tagbuttonDEU, .tagbuttonNLD, .tagbuttonBOS {font-size:10.3pt;background:#FAFAFA;color:#3B3B3B;border-radius:1px;
+                     padding:4px 6px 4px 5.5px;border:solid 0.5pt #888888;font-family:"Helvetica","Arial";}
+.tagbuttonENG  {font-size:10.3pt;}
+.tagbuttonDEU  {font-size:10.45pt;}
+.tagbuttonNLD  {font-size:10.25pt;}
+.tagbuttonBOS  {font-size:10.7pt;}
+.tagspan       {position:relative;top:0.3px;color:#222222;}
+
+/* Voor de tags en bijschriften in de foto's en video */
+.container     {position:relative;}
+.container2    {position:relative;overflow:hidden;}
+.container3    {position:relative;top:33.8px;transform:scale(1.02);}
+.container5    {position:absolute;}
+.container6    {position:relative;left:18.6px}
+.container7    {position:relative;top:154px;left:337px;z-index:1;filter:url(#f1);}
+.container102  {display:inline-block;position:relative;top:9.05px;left: 26.1px;z-index:1;transform:scale(0.93);pointer-events: auto; /* Parents van .socialmedia: Laat events door */}
+.container103  {display:inline-block;position:relative;top: 9.4px;left: 61.6px;z-index:1;transform:scale(0.9);pointer-events: auto; /* Parents van .socialmedia: Laat events door */}
+.container104  {display:inline-block;position:relative;top: 9.2px;left: 96.6px;z-index:1;transform:scale(0.9);pointer-events: auto; /* Parents van .socialmedia: Laat events door */}
+.container105  {display:inline-block;position:relative;top: 8.9px;left:131.2px;z-index:1;transform:scale(0.9);pointer-events: auto; /* Parents van .socialmedia: Laat events door */}
+.container106  {display:inline-block;position:relative;top: 8.8px;left:165.3px;z-index:1;transform:scale(0.9);pointer-events: auto; /* Parents van .socialmedia: Laat events door */}
+.circle1       {height:40px;width:40px;}
+.Lrect         {stroke:#900000;stroke-width:0.5px;fill:#B00000;opacity:0.2;transition:0.2s;x:11;y:11;width:18;height:18;rx:2;}
+.Lline         {stroke:#FFFFFF;stroke-width:2px;stroke-linecap:round;transform-origin:center;transform:rotate(-45deg);x1:13.5;y1:20;x2:25;y2:20;}
+.Lpolyline     {stroke:#FFFFFF;stroke-width:2px;stroke-linecap:round;fill:none;transform-origin:center;transform:rotate(-45deg);}
+.circleloc2    {position:relative;top:0px;left: 17px;z-index:1;height:40;pointer-events: none;}
+.circleloc3    {position:relative;top:0px;left: 52px;z-index:1;height:40;pointer-events: none;}
+.circleloc4    {position:relative;top:0px;left: 87px;z-index:1;height:40;pointer-events: none;}
+.circleloc5    {position:relative;top:0px;left:122px;z-index:1;height:40;pointer-events: none;}
+.circleloc6    {position:relative;top:0px;left:157px;z-index:1;height:40;pointer-events: none;}
+.europelocS    {width:380px;position:relative;top:0px;left:414px;border-radius:2px;}
+.europelocS2   {position:relative;top:-181px;left:414px;}
+
+/* Voor de tags en bijschriften in de foto's en video */
+/* Herstel pointer-events voor social media: Laat JS en clicks werken */
+.container5:has(.container102), .container5:has(.container103), .container5:has(.container104),
+.container5:has(.container105), .container5:has(.container106) {
+    pointer-events: auto; /* Specifiek voor social .container5 */
+}
+
+.socialmedia {
+    pointer-events: auto; /* Voor onclick */
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    padding: 4px; /* Grotere hit-area */
+    border-radius: 50%;
+    display: inline-block;
+    z-index:1;
+}
+
+.socialmedia:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    background-color: rgba(176, 0, 0, 0.1); /* Extra visuele hint */
+}
+
+.socialmedia:active {
+    transform: scale(0.95); /* Click-feedback */
+}
+
+.svgmedia {
+    pointer-events: auto; /* Nodig voor JS mouseover op SVGs */
+    width: 18px;
+    height: 18px;
+    filter:opacity(0.65);fill:#A00000;display:inline-block;position:relative;top:-4.2;left:-4.2;
+}
+
+/* Circles blijven non-interactief (decoratief) */
+#facebook1, #twitter1, #linkedin1, #whatsapp1, 
+.circleloc2, .circleloc3, .circleloc4, .circleloc5 {
+    pointer-events: none;
+}
+
+.svgcircle     {fill:none;stroke:#B00000;stroke-width:0.7px;cursor:pointer;transform:scale(0.9);}
+.navigation    {width:29px;height:3px;stroke:#FAFAFA;stroke-width:3.5px;stroke-linecap:round;}
+
+.bijschrift3       {color:#900000;filter:url(#f3);cursor:pointer;text-decoration:underline solid #900000;}
+.bijschrift5       {color:#900000;filter:url(#f3);cursor:pointer;text-decoration:underline solid #900000;}
+.eclilight:hover   {box-shadow:0 4px 10px 0 rgba(20,0,0,0.2);}
+.eclidark:hover    {box-shadow:0 4px 10px 0 rgba(20,0,0,0.2);color:red;}
+.eclinum1         {font-size:93%;}
+.eclinum5         {font-size:98%;}
+.url              {word-break:break-all; hyphens:none;}
+.urls             {word-break:break-all; hyphens:none;text-decoration:underline;}
+ 
+.vid4               {margin: 11pt 23px 9.5pt 40px;color:black;font-size:10.5pt;line-height:128%;hyphens:manual;z-index:1;v-align:middle}
+.vid8               {margin: 11pt 23px 9.5pt 26px;color:black;font-size:10.5pt;line-height:128%;hyphens:manual;z-index:1;v-align:middle}
+.vid5               {margin:    11pt 23px 12pt  19px;color:black;font-size:11.5pt;line-height:130%;hyphens:auto;z-index:1;v-align:middle;}
+.vid6, .vid7, .vid8, .vid9, .vid10 {margin:     0pt  0px 11px   3px;color:black;font-size:11.5pt;line-height:130%;hyphens:auto;z-index:1;v-align:middle;}
+.vid7, .vid9                {font-style:italic;}
+.vid8, .vid9                {margin-bottom:0;line-height:135%;}
+.vid10                      {margin:9pt 20px 9px 25px;}
+.vid18               {margin: 11pt 23px 9.5pt 26px;color:black;font-size:10.5pt;line-height:128%;hyphens:manual;z-index:1;v-align:middle}
+
+.waaromtable     {margin-left:auto;margin-right:auto;background:#F8F8F8;border-radius:0px 0px 3px 3px;}
+.waaromkol1      {min-width:16;max-width:16;}
+.waaromkol2      {min-width:190;max-width:190;}
+.waaromkol3      {min-width:120;max-width:120;}
+.waaromkol4      {min-width:25;max-width:25;}
+.waaromkol5      {min-width:130;max-width:130;}
+.waaromkol6      {min-width:170;max-width:170;}
+.fontbullet      {font-size:24;position:relative;top:0.5;}
+.lijn            {border-bottom: 1px solid #999999;padding-bottom:5;padding-top:6;}
+.lijn2           {padding-bottom:5;padding-top:5;}
+.lijn3           {border-bottom: 1px solid #999999;padding-bottom:0;padding-top:11;}
+.lijn4           {padding-bottom:0;padding-top:11;}
+
+/* voor de indeling in 4 blokken op rij */
+.column2       {float:left;width:25%;text-align:center;}
+.card2A        {border-radius:3px;border: solid 0.5px #CCCCCC;min-height:140;}
+.card3         {padding:14pt 0 13.5pt 0;text-align:center;}
+.card4A        {overflow:hidden;border-radius:0 3px 3px 0;}
+.card6         {overflow:hidden;border-radius:3px;opacity:0;min-width:258;max-width:258;min-height:140;max-height:140;}
+.extraborder   {border:solid 1px #E4E4E4;background:#FFFFFF;border-radius:3px;pointer-events: none;  /* Laat clicks doordringen naar iframe */ background: transparent !important;  /* Verwijder witte bg voor betere integratie */ }
+
+.td1, .td2     {line-height:15.8pt;font-size:10.5pt;color:black;opacity:0;position:relative;top:-0.5;}
+.td1           {margin:0 12pt 0 0;text-align:right;}
+.td2           {margin:0 0 0 12pt;}
+.td3           {color:black;}
+
+.polysvg       {height:200px;width:  40px;position:relative;top:0px;left:260px;z-index:1;}
+.polysvgdown   {height: 40px;width:1064px;position:relative;top:-33px;z-index:1;}
+.polygon1      {fill:#545456;}
+.polygon2      {fill:#3D3D4B;}
+.polygon3      {fill:#900000;}
+.polyline1, .polyline2, .polyline3, .polyline4 {stroke:#E7E7E7;stroke-width:4.5pt;fill:#525659;}
+.polyline2     {fill:#3D3D4B;}
+.polyline3     {fill:#900000;}
+.polyline4     {fill:#A20000;}
+
+.cursor        {cursor:pointer;}
+.counterhead   {font-size:21.5pt;line-height:125%;filter:url(#f3);letter-spacing:0.1px;}
+.countertext   {font-size:11.0pt;line-height:125%;filter:url(#f3);letter-spacing:0.1px;}
+.counternote   {font-size:   9pt;line-height:125%;}
+
+/* Voor de tijdlijn */
+.timepos                {position:relative;top:1px;left:52px;z-index:1;font-family:"Helvetica","Arial";}
+.timeline               {color:#FAFAFA;font-size:10.5pt;height:16px;border-radius:9pt;border:solid 1px #FAFAFA;background:#52565D;
+                         opacity:0;letter-spacing:0.4px;padding:1.5px 7.5px 2px 7px;}
+.stoplicht0             {animation:stop0 14s linear 2.0s infinite running forwards;}
+@keyframes stop0 {   0% {opacity:0;}
+                    10% {opacity:1;}
+                    77% {opacity:1;}
+                  93.5% {opacity:0;}}
+.stoplicht0T            {animation:stop0T 14s linear 2.0s infinite running forwards;}
+@keyframes stop0T {  3% {opacity:0;}
+                    18% {opacity:1;}
+                  75.5% {opacity:1;}
+                    89% {opacity:0;}}
+
+.stoplicht1A            {animation:stop1A 14s linear 2.0s infinite running forwards;}
+@keyframes stop1A { 12% {opacity:0;}
+                    18% {opacity:1;}
+                    77% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht1B            {animation:stop1B 14s linear 2.0s infinite running forwards;}
+@keyframes stop1B { 15% {opacity:0;}
+                    18% {opacity:1;}
+                    77% {opacity:1;}
+                   100% {opacity:0;}}
+
+.stoplicht2A            {animation:stop2A 14s linear 2.0s infinite running forwards;}
+@keyframes stop2A { 23% {opacity:0;}
+                    29% {opacity:1;}
+                    77% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht2B            {animation:stop2B 14s linear 2.0s infinite running forwards;}
+@keyframes stop2B { 26% {opacity:0;}
+                    29% {opacity:1;}
+                    77% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht2C            {animation:stop2C 14s linear 2.0s infinite running forwards;}
+@keyframes stop2C { 28% {opacity:0;}
+                    29% {opacity:1;}
+                    77% {opacity:1;}
+                   100% {opacity:0;}}
+
+.stoplicht3A            {animation:stop3A 14s linear 2.0s infinite running forwards;}
+@keyframes stop3A { 36% {opacity:0;}
+                    42% {opacity:1;}
+                    77% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht3B            {animation:stop3B 14s linear 2.0s infinite running forwards;}
+@keyframes stop3B { 39% {opacity:0;}
+                    42% {opacity:1;}
+                    77% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht3C            {animation:stop3C 14s linear 2.0s infinite running forwards;}
+@keyframes stop3C { 41% {opacity:0;}
+                    42% {opacity:1;}
+                    77% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht4A            {animation:stop4A 14s linear 2.0s infinite running forwards;}
+@keyframes stop4A { 48% {opacity:0;}
+                    54% {opacity:1;}
+                    77% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht4B            {animation:stop4B 14s linear 2.0s infinite running forwards;}
+@keyframes stop4B { 51% {opacity:0;}
+                    54% {opacity:1;}
+                    77% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht5A            {animation:stop5A 14s linear 2.0s infinite running forwards;}
+@keyframes stop5A { 60% {opacity:0;}
+                    66% {opacity:1;}
+                    77% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht5B            {animation:stop5B 14s linear 2.0s infinite running forwards;}
+@keyframes stop5B { 63% {opacity:0;}
+                    66% {opacity:1;}
+                    77% {opacity:1;}
+                   100% {opacity:0;}}
+.stroke                 {stroke-width:0.5px;stroke:#000000;opacity:0;}
+.linestyle              {stroke:#000000;stroke-width:3;stroke-linecap:round;opacity:0;}
+.path                   {stroke:#000000;stroke-width:2;fill:none;stroke-dasharray:116;stroke-dashoffset:116;animation:dash 14s linear 3.5s infinite running forwards;}
+@keyframes dash {
+    6% {stroke-dashoffset:  98;}
+   12% {stroke-dashoffset:  98;}
+   18% {stroke-dashoffset:  77;}
+   24% {stroke-dashoffset:  77;}
+   30% {stroke-dashoffset:  56;}
+   36% {stroke-dashoffset:  56;}
+   42% {stroke-dashoffset:  35;}
+   48% {stroke-dashoffset:  35;}
+   54% {stroke-dashoffset:  14;}
+   60% {stroke-dashoffset:  14;}
+   66% {stroke-dashoffset:   0;}
+   88% {stroke-dashoffset:   0;}
+   89% {stroke-dashoffset: 116;}}
+
+/* Voor het tonen van de steden op de kaart */
+.stroke2                {stroke-width:1px;stroke:#FFFFFF;fill:#2B2B5B;}
+.stoplichtX1            {z-index:1;}
+.stoplichtY1            {height:15.5;fill:#FFFFFA;opacity:0.7;}
+.stoplichtZ1            {fill:#333333;font-size:8.7pt;letter-spacing:0.1px;}
+
+/* voor het oplichten van de boekcover */
+.opacityani {animation:flip2 1.4s ease-out 1.0s 1 forwards;}
+@keyframes flip2 {
+   0% {opacity:0;filter:blur(20px);}
+ 100% {opacity:1;filter:blur(0px);}}
+
+#publicationsList {transition: max-height 1.5s ease-out;}
+#readMoreLink {color: #007BFF;text-decoration: underline;cursor: pointer;}
+#readMoreLink:hover {color: #0056b3;}
+
+/* Subtiel knipper-effect: fade opacity van 1.0 naar 0.8 */
+.knipper-cirkel {
+    animation: knipper 2s ease-in-out infinite; /* Duur: 2s, oneindig herhalend */
+}
+
+@keyframes knipper {
+    0%, 100% { opacity: 1.0;r:7;fill:royalblue; }    /* Volledig zichtbaar */
+    50% { opacity: 0.5;r:6.5;fill:#1A2A44; }         /* Licht vervagen voor 'knipper' */
+}
+.knipper-cirkel2 {
+    animation: knipper2 2s ease-in-out infinite; /* Duur: 2s, oneindig herhalend */
+}
+
+@keyframes knipper2 {
+    0%, 100% { opacity: 1.0;r:7;fill:black; }    /* Volledig zichtbaar */
+    50% { opacity: 0.5;r:3.5;fill:white; }         /* Licht vervagen voor 'knipper' */
+}
+
+/* voor de sprite met personen */
+.sprite                {background-image:url(media/personen-v31.png);background-repeat:no-repeat;display:block;width:142px;height:142px;border:solid 3px #FFFFFF;border-radius:50%;}
+.sprite-alsiadi        {background-position:  -6px -580px;}
+.sprite-bojan          {background-position:-865px -145px;}
+.sprite-vanzutphen     {background-position:-148px    0px;}
+.sprite-degrave        {background-position:-859px    2px;}
+.sprite-dewinter       {background-position:-435px    0px;}
+.sprite-droge          {background-position:     0 -145px;}
+.sprite-flaticon       {background-position:-146px -145px;}
+.sprite-colakovic      {background-position:-290px    0px;}
+.sprite-durakovic      {background-position:-562px -583px;}
+.sprite-heij           {background-position:-594px -435px;}
+.sprite-karabulut      {background-position:-290px -145px;}
+.sprite-laroes         {background-position:  -3px -290px;}
+.sprite-nuhanovic      {background-position:-867px -580px;}
+.sprite-overduyn       {background-position:-448px -150px;}
+.sprite-post           {background-position:-726px -290px;}
+.sprite-pronk          {background-position:-145px -290px;}
+.sprite-sprik          {background-position:-726px -435px;}
+.sprite-tendam         {background-position:-726px -145px;}
+.sprite-vanbommel      {background-position:-290px -290px;}
+.sprite-voorhoeve      {background-position:-300px -585px;}
+.sprite-middelkoop     {background-position:-297px -435px;}
+.sprite-vanojik        {background-position:-436px -435px;}
+.sprite-vanwulfen      {background-position:-580px -145px;}
+.sprite-vleugels       {background-position:-581px -290px;}
+
+/* voor de sprite met icons */
+.icons {background-image:url(media/icons-v31.png);background-repeat:no-repeat;display:block;width:142px;height:142px;border:solid 3px #FFFFFF;border-radius:50%;}
+.icons-31mag              {background-position:   -8px   -7px;}
+.icons-avaz               {background-position: -294px   -3px;}
+.icons-balkaninsight      {background-position: -297px -576px;}
+.icons-bannedbooks        {background-position: -296px -294px;}
+.icons-bibliotheek        {background-position: -596px -720px;}
+.icons-bljesak            {background-position: -445px -717px;}
+.icons-blauwhelm          {background-position:   -5px -148px;}
+.icons-bloem              {background-position: -880px -717px;}
+.icons-boekx              {background-position: -731px -138px;}
+.icons-bosna              {background-position: -442px -153px;}
+.icons-burco              {background-position: -880px    0px;}
+.icons-casema             {background-position: -878px -294px;}
+.icons-copilot            {background-position: -296px -863px;}
+.icons-deepseek           {background-position:  -14px -863px;}
+.icons-denhaag            {background-position: -731px -857px;}
+.icons-grok               {background-position: -583px    2px;}
+.icons-hebban             {background-position:    0px -297px;}
+.icons-ing                {background-position: -591px -864px;}
+.icons-jazeera            {background-position: -144px -298px;}
+.icons-jazeerabalkans     {background-position:  -11px -712px;}
+.icons-judaism            {background-position: -148px -861px;}
+.icons-koningin           {background-position: -149px   -3px;}
+.icons-leeskost           {background-position: -290px -430px;}
+.icons-leidsch            {background-position: -438px -294px;}
+.icons-linkedin           {background-position: -580px -298px;}
+.icons-nieuwerevu         {background-position:   -4px -440px;}
+.icons-nwo                {background-position: -443px -581px;}
+.icons-odb                {background-position: -880px -150px;}
+.icons-randstad           {background-position: -733px -291px;}
+.icons-rechtspraak        {background-position: -145px -439px;}
+.icons-rijk               {background-position: -296px -723px;}
+.icons-rts                {background-position: -439px   -1px;}
+.icons-vaalburg           {background-position: -884px -440px;}
+.icons-vandiepen          {background-position: -440px -438px;}
+.icons-veteraneninstituut {background-position: -585px -143px;}
+.icons-vkontakte          {background-position: -296px -150px;}
+.icons-volkskrant         {background-position: -445px -712px;}
+.icons-vrijheid           {background-position: -147px -148px;}
+.icons-xAI                {background-position: -438px -864px;}
+
+/* voor de aanpassing voor grote en kleine schermen */
+div.S-scherm  {display:none;} @media only screen and (max-width: 810px)                         {div.S-scherm  {display:inline;}}
+div.SM-scherm {display:none;} @media only screen and (max-width: 1079.9px)                      {div.SM-scherm {display:inline;}}
+div.M-scherm  {display:none;} @media screen and (max-width: 1079.9px) and (min-width: 810.1px)  {div.M-scherm  {display:inline;}}
+div.G-scherm  {display:none;} @media only screen and (min-width: 1080px)                        {div.G-scherm  {display:inline;}}
+div.MG-scherm {display:none;} @media only screen and (min-width: 810.1px)                       {div.MG-scherm {display:inline;}}
+
+/* voor het wel of niet tonen van de boektitel */
+#myLinks {display:none;}
+
+/* Responsive maken van website */
+.breedte415     {width:190px;height:106.87px;}
+.breedte415A    {width:329px;height:186.8px;}
+.breedte415B    {width:329px;height:186.8px;}
+.breedte415C    {width:303px;height:170.0px;}
+.breedte415D    {width:303px;height:170.0px;}
+.breedte415E    {width:750px;border:solid 0.5px #CCCCCC;border-radius:3px;}
+.breedte484     {width:480px}
+.breedte629     {width:629px}
+.breedte730B    {width:748px;position:relative;left:0.7px;}
+.breedte747     {width:755px}
+.breedte774     {width:772px;}
+.breedte794     {width:794px}
+.button1        {font-size:13px;}
+.align          {text-align:left;}
+.marginright    {margin-right:322px;}
+.vimeo          {border-radius:3px;z-index:1;position:relative;}
+.vimeo2         {width:299;height:171;vertical-align:top;right:-27.7;border-radius:0 0 4px 4px;}
+.dnevniktop1    {position:relative;top:-16px;}
+.dnevniktop2    {position:relative;top:8px;}
+.Xstyle         {padding:15pt 0 22.5pt 0;}
+.Xspace         {font-size:14.5pt;}
+
+/* Als de viewport een minimale breedte heeft van 980 pixels, dan de site optimaliseren voor breed */
+@media only screen and (min-width: 1080px) {
+.breedte415     {width:250px;height:140px;}
+.breedte415E    {width:1009px;}
+.breedte484     {width:728px}
+.breedte629     {width:879px}
+.breedte730B    {width:1010px;position:relative;left:-0.7px;}
+.breedte747     {width:1010px}
+.breedte774     {width:1024px}
+.breedte794     {width:1054px}
+.menubutton     {padding:7.5px 15px;margin-right:4px;background-image:linear-gradient(110deg, #52565D, #52565D 100%);}
+.auteurtxt      {text-align:justify;margin-left:20px;}
+.button1        {font-size:14px;}
+.blurbbar       {border-radius:3px 3px 3px 3px;}
+.blurbstyle     {font-size:12.9pt;letter-spacing:0.15px;}
+.counterhead    {margin-top:9;}
+.countertext    {font-size:14pt;}
+.counternote    {font-size:10.2pt;margin-bottom:12px;margin-top:1.5;}
+.marginright    {margin-right:269px;}
+.vid2, .vid2A   {text-align:left;}
+.dnevniktop1    {top:-36px;}
+.dnevniktop2    {position:relative;top:-14px;}
+.Xstyle         {padding:15.5pt 0 24.8pt 0px;filter:url(#f3);}
+.bijschriftX    {font-size:9.4pt;}
+.Xspace         {font-size:13pt;}
+.europelocS     {left:674px;}
+.europelocS2    {left:674px;}
+.align          {text-align:right;}
+.container6     {position:relative;left:0px}
+.container7     {left:458px;top:106px;}
+.min            {min-height:137px;}
+.vid1           {margin:  18pt 18pt      0  18pt;font-size:  15pt;line-height:125%;}
+.vid1BOS        {margin:  18pt 18pt      0  18pt;font-size:  15pt;line-height:125%;}
+.vid2           {font-size:11pt;line-height:125%;}
+.minmax         {min-height:135px;max-height:135px;}
+.col2a, .col2b  {margin-left:3pt;font-size:10.5pt;}
+.col4           {margin-left:3pt;}
+.table1, .table2 {height:165px;}
+.tableDEU       {height:200;}
+.tablewidth     {width:59.5pt}
+.portretcirkel  {width:366;margin:3 5 0 25;}
+.auteurstyle    {margin:38 0 24 418}
+.auteurfoto     {margin:10 40 0 26;}
+.smal2          {display:none;}
+}
+
+/* Als de viewport een maximale breedte heeft van 810 pixels, dan de site optimaliseren voor smal */
+@media only screen and (max-width:810px) {
+.breedte415     {width:165px;height:92.8px;}
+.breedte415E    {min-width:650px;max-width:650;}
+.breedte484     {width:379px}
+.breedte629     {width:529px}
+.breedte730B    {width:648px;position:relative;left:0.8px;}
+.breedte747     {width:658px}
+.breedte774     {width:672px}
+.breedte794     {width:694px}
+.counternote    {font-size:7.5pt;}
+.countertext    {font-size:10pt;}
+.smal           {display:none;}
+.auteurtxt      {font-size:10.2pt}
+.star           {letter-spacing:0em;font-size:11.2pt;}
+.button1        {font-size:12px;}
+.blurbstyle     {font-size:11pt;letter-spacing:0.05px;}
+.tekst          {font-size:11pt;line-height:125%;}
+.align          {text-align:left;}
+.button1, .button2 {padding:5.5px 9px;}
+.europelocS     {left:314px;}
+.europelocS2    {left:314px;}
+.container7     {left:288px;}
+.vid1           {margin:  13pt 18pt      0  18pt;}
+.vid1BOS        {margin:  8pt 18pt      0  18pt;font-size:12.5pt;line-height:115%;}
+.vid2           {font-size:10pt;line-height:115%;}
+.marginright    {margin-right:322px;}
+.table1, .table2 {height:292px;}
+.tableDEU       {height:360px;}
+.container7     {top:173px;left:280px;}
+.vid10          {margin:9pt 14px 9px 20px;}
+}
