@@ -1,0 +1,415 @@
+/* CSS stylesheet behorend bij dedoofpotgeneraal.nl/m */
+
+/* Voor vaste maten van blokken */
+html          {box-sizing:border-box}*,*:before,*:after{box-sizing:inherit;}
+
+/* Voor vervagingseffect aan begin */
+body          {opacity:1;transition:2.5s;animation:kleuren 0s linear 1 forwards;}
+body.fade-out {opacity:0;transition:none;}
+@keyframes kleuren {from {background:#FFFFFF;} to {background:#F4F4F4;}}
+
+/* CSS voor de gefixeerde header */
+.header       {position:sticky;left:0;top:0;z-index:2;}
+
+.table  {width:100%;margin:0 auto;border-collapse:separate;border-spacing:0;}
+.td     {text-align:center;vertical-align:bottom;padding-top:16;}
+.circle {min-width:100;max-width:100;min-height:165;max-height:165;border-radius:3px;margin:0 0 0 0;box-shadow:0 10px 16px 0 rgba(0,0,0,0.3), 0px 76px 52px -82px rgba(0,0,0,3);background:white;}
+.label  {font-size:9.5pt;line-height:1.3;min-width:100;max-width:100;margin:0 0 0 8;hyphens:none;color:#000000;position:relative;top:-62;}
+.info   {fill:url(#grad2);stroke:#AAAAAA;stroke-width:0.5;}
+.text   {font-size:20;text-anchor:middle;fill:#000000;font-weight:bold;}
+
+/* Voor correcte interne hyperlinks */
+.anchor       {display:block;height:58px;margin-top:-58px;visibility:hidden;}
+
+/* voor de headers */
+.graybar      {background-image:linear-gradient(110deg, #424649, #424649 40%, #505456 50%, #505456 60%, #424649 90%);border-radius:4px;}
+.blurbbar     {background-image:radial-gradient(circle, #4B4B58, #3B3B44);}
+.authorbar    {background-image:linear-gradient(to left, #373B3F 0%, #34383C 40%, #373B3F 100%);box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);}
+.boxshadow    {box-shadow:0 10px 12px 0 rgba(0,0,0,0.1), 0px 76px 52px -82px rgba(0,0,0,1);}
+
+/* voor andere kleuren */
+.kleur6       {background-image:radial-gradient(circle, #4B4B58, #3B3B44);}
+.kleur9       {position:relative;top:-1px;}
+.kleur36      {background-image:radial-gradient(circle, #D00000, #900000);border-radius:3px;border-top:solid 5px #A00000;border-bottom:solid 5px #A00000;}
+.kleur37      {background-image:radial-gradient(circle, #707072, #525659);border-radius:4px;}
+.kleur38      {background-image:radial-gradient(circle, #53535C, #3B3B44);border-radius:4px;}
+.kleur39      {background-image:linear-gradient(110deg, #B00000, #A00000 100%);border-radius:4px;}
+.kleur41      {background-image:linear-gradient(135deg, #D0D4D8, #D0D4D8 50%, #E6EAEE 100%);border-radius:12px;border:solid 0.5px #BBBDBF;}
+.kleur43      {background-image:radial-gradient(circle, #D7DDE0, #C5C9CD);border-radius:0 0 12px 12px;}
+.kleur44      {background-image:radial-gradient(circle, #D0D4D8, #C5C9CD);border-radius:12px;border:solid 0.5px #BBBDBF;}
+.kleur45      {background-image:radial-gradient(circle, #C5C9CD, #B5B9BD);}
+.kleur46      {background:#FFFFFF;}
+.box          {border-radius:4px;}
+
+/* Voor headers en alinea's */
+.ankeiler     {color:#404040;margin-left:10px;margin-right:10px;font-size:12pt;font-style:italic;}
+h1            {color:#000000;filter:url(#f3);margin:9pt 0 10pt 10px;font-weight:normal;font-family:"Helvetica","Arial";}
+p             {margin:0 0 0 0;font-family:"Helvetica","Arial";color:#000000;font-size:11pt;}
+
+a:link, a:visited {color:#000000;text-decoration-color:#000000;}
+a:hover           {color:#900000;box-shadow:0 4px 10px 0 rgba(20,0,0,0.20);}
+a:active          {color:#900000;}
+
+a.whitelink:link, a.whitelink:active, a.whitelink:visited {color:#CCCCCC;word-break:break-all; hyphens:none;}
+a.whitelink:hover  {color:#DDDDDD;box-shadow:0 4px 10px 0 rgba(20,0,0,0.20);}
+a.noshadow        {box-shadow:none;}
+
+a.redlink:link, a.redlink:active, a.redlink:visited {color:#700000;word-break:break-all; hyphens:none;}
+a.redlink:hover   {color:#800000;box-shadow:0 4px 10px 0 rgba(20,0,0,0.20);}
+a.noshadow        {box-shadow:none;}
+
+a.top12link:link, a.top12link:active, a.top12link:visited {color:#FFFFFF;}
+a.top12link:hover   {color:#FFFFFF;box-shadow:0 4px 10px 0 rgba(20,0,0,0.20);}
+a.noshadow        {box-shadow:none;}
+
+sup            {font-size:80%;top:-0.4em;}
+table          {border-spacing:0;border:none;}
+td             {padding:0px;vertical-align:top;}
+.taal          {display:inline-block;filter:grayscale(0.15);}
+.taalsvg       {display:inline-block;width:17px;position:relative;top:4px;left:2px;transform:scale(2);opacity: 0.7;}
+.taalsvg2      {display:inline-block;width:20px;transform:scale(2);position:relative;top:2.5px;left:0.5}
+.flagcircle    {stroke:#000000;fill:#7B7B7B;transition:0.3s;}
+
+.inspring      {margin-left:2.5em;} 
+.hoofd         {margin-left:11px;text-align:left;hyphens:auto;font-size:12pt;margin-top:6pt;}
+.auteurtxt, .auteurtxt2 {margin-left:11px;text-align:left;hyphens:auto;font-size:11pt;margin-top:8pt;color:#FAFAFA;margin-right:8px;}
+.auteurtxt2    {font-size:10pt;font-style:italic;}
+.auteurtxtlink {color:white;}
+.tekst         {margin:5.5pt 7px 0pt 7px;text-align:left;hyphens:auto;line-height:125%;font-size:11pt;}
+.kop           {margin:10pt  7px 8pt 7px;text-align:left;line-height:120%;font-size:14pt;font-weight:normal;filter:url(#f3);}
+.star          {color:goldenrod;font-size:16pt;filter:url(#f4);position:relative;top:2px;}
+
+.blurbstyle     {margin:23.5pt 18pt 25pt 18pt;font-size:11.4pt;color:#FAFAFA;text-align:center;filter:url(#f1);letter-spacing:0.1px;line-height:125%;}
+.creditsstyle   {font-size:6.45pt;text-align:justify;text-transform:uppercase;hyphens:auto;color:#EEEEEE;}
+.lastlinestyle1 {font-size:11pt;color:#FAFAFA;}
+.lastlinestyle2 {font-size:11pt;color:#FAFAFA;position:relative;top:2;}
+.lasttd1        {padding:9px 10px 2px 0px;text-align:right;border-radius:4px;}
+.lasttd2        {background-image:linear-gradient(110deg, #B00000, #A00000 100%);padding:9px 0px 2px 12px;text-align:left;
+                 border-radius:4px;}
+.bookstyle      {width:233px;height:349.5px;transform:scale(1.15);border:solid 0.7px #444444;}
+.kleinvlaggetje  {font-size:10pt;position:relative;top:1.5;}
+.waaromkol3      {}
+.waaromkol5      {}
+.waaromkol4      {min-width:33;max-width:33;}
+.waaromkol6      {}
+.lijn            {border-bottom: 1px solid #999999;padding-bottom:5;padding-top:5;}
+.lijn2           {padding-bottom:5;padding-top:5;}
+.vid9            {font-style:normal;margin-top:2;margin-bottom:1;}
+
+/* voor de afbeeldingen */
+.journalist            {position:relative;top:-49px;left:-59.5px;
+                        animation-name:oplichten;animation-duration:0.6s;animation-fill-mode:forwards;animation-timing-function:ease-out;}
+@keyframes oplichten   {from {transform:scale(0.42)rotateY(90deg);} to {transform:scale(0.42)rotateY(0deg);}}
+.oplichten2            {animation-name:oplichten2;animation-duration:0.4s;animation-fill-mode:forwards;animation-timing-function:ease-out;}
+@keyframes oplichten2  {from {transform:scale(0.42)rotateY(90deg);} to {transform:scale(1)rotateY(0deg);}}
+.oplichten2R           {animation-name:oplichten2R;animation-duration:0.4s;animation-fill-mode:forwards;animation-timing-function:ease-in;}
+@keyframes oplichten2R {from {transform:scale(1)rotateY(0deg);} to {transform:scale(0.42)rotateY(-90deg);}}
+
+.vervagen              {animation-name:vervagen;animation-duration:1s;animation-fill-mode:forwards;}
+@keyframes vervagen    {from {opacity:1;} to {opacity:0.3;}}
+
+/* voor de titel */
+.type1  {opacity:0;animation:typing 0.3s linear 1s   forwards;}
+.type2  {opacity:0;animation:typing 0.3s linear 1.1s forwards;}
+.type3  {opacity:0;animation:typing 0.3s linear 1.2s forwards;}
+.type4  {opacity:0;animation:typing 0.3s linear 1.3s forwards;}
+.type5  {opacity:0;animation:typing 0.3s linear 1.4s forwards;}
+.type6  {opacity:0;animation:typing 0.3s linear 1.5s forwards;}
+.type7  {opacity:0;animation:typing 0.3s linear 1.6s forwards;}
+.type8  {opacity:0;animation:typing 0.3s linear 1.7s forwards;}
+.type9  {opacity:0;animation:typing 0.3s linear 1.8s forwards;}
+.type10 {opacity:0;animation:typing 0.3s linear 1.9s forwards;}
+.type11 {opacity:0;animation:typing 0.3s linear 2.0s forwards;}
+.type12 {opacity:0;animation:typing 0.3s linear 2.1s forwards;}
+.type13 {opacity:0;animation:typing 0.3s linear 2.2s forwards;}
+.type14 {opacity:0;animation:typing 0.3s linear 2.3s forwards;}
+.type15 {opacity:0;animation:typing 0.3s linear 2.4s forwards;}
+.type16 {opacity:0;animation:typing 0.3s linear 2.5s forwards;}
+.type17 {opacity:0;animation:typing 0.3s linear 2.6s forwards;}
+.type18 {opacity:0;animation:typing 0.3s linear 2.7s forwards;}
+.type19 {opacity:0;animation:typing 0.3s linear 2.8s forwards;}
+.type20 {opacity:0;animation:typing 0.3s linear 2.9s forwards;}
+@keyframes typing {from {opacity:0;transform:scale(0.7);} to {opacity:1;transform:scale(1);}}
+
+subtitel    {margin-right:13px;color:#DDDDDD;font-size:11pt;float:right;margin-bottom:9px;opacity:0;animation:typing 0.7s linear 2.8s forwards;}
+
+.avatar     {width:72px;height:72px;position:relative;top:-5.8px;left:-1.2px;}
+.icon       {width:72px;height:72px;transform:scale(0.5);position:relative;top:-23px;left:-19.8px;}
+.portret    {width:350;max-width:350;}
+
+/* Voor de kleuren bij het selecteren van tekst */
+::selection {color:white;background:#666666;}
+
+/* Voor de quotes, indeling in 4 kolommen en 2 achtergrondkleuren */
+.col1       {margin:  7pt  0pt 7pt   0pt;}
+.col2a      {margin:  1pt  3pt   0 4.5pt;color:#000000;font-size:11pt;line-height:110%;text-indent:-0.5}
+.col2b      {margin:1.0pt  3pt   0 4.5pt;color:#000000;font-size:11pt;line-height:110%;}
+.colstar    {margin:6.0pt  3pt   0   5pt;color:#000000;font-size:11pt;line-height:110%;}
+.col4       {margin:4.0pt  3pt   0 4.5pt;color:#700000;font-size: 7pt;line-height:110%;}
+.citaten    {color:#700000;}
+.top12      {margin:  0pt 12px   0  12px;color:#FFFFFF;font-size:10pt;line-height:110%;text-align:left;hyphens:auto;}
+
+.ttd1       {width: 40px;padding:10 0 10  0;}
+.ttd2       {width:290px;padding: 6 0  0 12;hyphens:auto;}
+.tabledark  {height:160px;width:100%;border-radius:3pt;background-image:linear-gradient(135deg, #D0D0D0, #D0D0D0 50%, #FAFAFA 100%);border:solid 0.5px #CCCECF;}
+.tablelight {height:160px;width:100%;border-radius:3pt;background-image:linear-gradient(135deg, #E7E7E7, #E7E7E7 50%, #FAFAFA 100%);border:solid 0.5px #CCCECF;}
+
+.svgicon1   {width:120;height:120;position:relative;left:-31;top:-31px;}
+.svgicon2      {width:120;height:120;position:relative;left:-33;top:-37px;}
+.svgrect1   {fill:url(#grad1);filter:url(#f2);}
+.svgrect2   {fill:white;z-index:1;stroke:#555555;stroke-width:0.5px;}
+.svgrect3   {fill:#52565D;z-index:1;stroke:#000000;stroke-width:0.5px;}
+.number2    {fill:white;font-size:11.5pt;font-weight:normal;font-type:italic;}
+.number     {fill:#555555;font-size:14px;font-weight:normal;font-type:italic;}
+.line       {stroke:white;stroke-width:3.6;}
+.hidden     {position:relative;left:9px;top:-8px;display:inline-block;}
+.svgicon3   {width:100px;height:100px;position:relative;left:-7.5pt;top:0.5px;}
+.svgicon4   {stroke:#AEB6BF;stroke-width:1px;fill:url(#grad1);filter:url(#f2);}
+.svgheightNLD  {height:26.1px;margin:10 0   4  11;}
+.svgheightENG  {height:25.8px;margin:10 0 3.5  11;}
+.svgheightDEU  {height:25.6px;margin:10 0 3.5  11;}
+.svgheightBOS  {              margin: 6 9 3.5   9;}
+
+/* Voor de buttons */
+button              {font-family:Helvetica;}
+.menubutton, .downloadbutton {background-image:radial-gradient(circle, #4B4B58, #3B3B44);color:#FAFAFA;font-size:22px;text-align:left;
+                     transition:transform 0.2s;text-decoration:none;cursor:pointer;border-radius:3px;border:solid 0.5px #330000;
+                     margin-left:0px;padding:6.5px 10px;min-width:150px;font-family:"Helvetica","Arial";}
+.menubutton:focus   {outline:none;border:solid 0.5pt #FAFAFA;}
+.menubutton:hover   {background-image:linear-gradient(110deg, #F00000, #F00000 100%);color:#FAFAFA;box-shadow: 0 0 7px 0 #FAFAFA;}
+.downloadbutton       {background:#C00000;}
+.downloadbutton:focus {outline:none;border:solid 0pt #FF0000;}
+.downloadbutton:hover {background:#FF0000;color:#FFFFFF;box-shadow: 0 0 7px 0 #FAFAFA;}
+.bestelbutton       {background-image:linear-gradient(110deg, #C00000, #B00000 100%);transition:transform 0.3s;color:#FAFAFA;padding:4.5px 39px;text-align:center;
+                     font-size:21px;border:solid 0.5pt #800000;text-decoration:none;cursor:pointer;border-radius:40px;font-family:"Helvetica","Arial";}
+.bestelbutton:hover {background-image:linear-gradient(110deg, #F00000, #F00000 100%);color:#FAFAFA;}
+.bestelbutton:focus {outline:none;border:solid 0.5pt #FF0000;}
+.button1            {background-image:linear-gradient(110deg, #C00000, #B00000 100%);transition:transform 0.3s;color:#FAFAFA;padding:2px 9px 4px 9px;font-size:17px;
+                     text-align:center;text-decoration:none;cursor:pointer;border-radius:40px;border: solid 0.5pt #800000;font-family:"Helvetica","Arial";}
+.button1:hover      {background-image:linear-gradient(110deg, #E00000, #E00000 100%);color:#FAFAFA;}        
+
+/* Voor de tags en bijschriften in de foto's en video */
+.container     {position:relative;}
+.container2    {position:relative;overflow:hidden;}
+.container4    {position:absolute;display:inline-block;}
+.container5    {position:absolute;}
+.container102  {display:inline-block;position:relative;top:  16px;left:   16px;z-index:1;}
+.container103  {display:inline-block;position:relative;top:16.5px;left:   67px;z-index:1;}
+.container104  {display:inline-block;position:relative;top:17.5px;left:117.5px;z-index:1;}
+.container105  {display:inline-block;position:relative;top:  16px;left:  166px;z-index:1;}
+.container106  {display:inline-block;position:relative;top:  16px;left:  216px;z-index:1;}
+.circleloc2    {position:relative;top:0px;left:0px  ;z-index:1;}
+.circleloc3    {position:relative;top:0px;left:50px ;z-index:1;}
+.circleloc4    {position:relative;top:0px;left:100px;z-index:1;}
+.circleloc5    {position:relative;top:0px;left:150px;z-index:1;}
+.circleloc6    {position:relative;top:0px;left:200px;z-index:1;}
+
+.svgcircle     {fill:none;stroke:#B00000;stroke-width:1px;cursor:pointer;}
+.svgmedia      {height:28px;width:28px;filter:opacity(0.7);fill:#B00000;display:inline-block;}
+.socialmedia   {z-index:1;cursor:pointer;}
+
+.meer1         {width:20px;height:20px;position:relative;left:0.5px;top:-1px;}
+.meer2         {fill:none;stroke:#900000;stroke-width:2.5px;}
+
+.navigation    {stroke-linecap:round;stroke:#FAFAFA;stroke-width:4;}
+.container12   {width:330px;height:430px;overflow-x:scroll;overflow-y:hidden;display:grid;grid-template-columns:100% 100%;}
+.element       {scroll-snap-align:start;scroll-snap-stop:normal;display:flex;align-items:center;}
+
+.bijschrift3       {color:#900000;filter:url(#f3);cursor:pointer;text-decoration:underline solid #900000;}
+.bijschrift3:hover {text-decoration:none;}
+.bijschrift4       {color:#900000;filter:url(#f3);cursor:pointer;box-shadow:none;text-decoration:underline solid #900000;}
+.bijschrift4:hover {text-decoration:none;}
+.bijschriftX       {color:#444444;font-size: 11pt;text-transform:uppercase;letter-spacing:.05pt;margin-right:4px;margin-top:6px;font-weight:bold;
+                    animation-name:lichter2;animation-duration:1s;animation-fill-mode:forwards;hyphens:none;}
+.bijschrift5       {color:#FFFFFF;filter:url(#f3);cursor:pointer;text-decoration:underline solid #D00000;text-decoration-thickness:2px;}
+.bijschrift5:hover {box-shadow:0 4px 10px 0 rgba(20,0,0,0.1);;}
+.eclinum1         {font-size:92%; letter-spacing:0;}
+.eclinum2         {font-size:92%; letter-spacing:0.02;}
+.eclinum3         {font-size:100%;letter-spacing:0;}
+.eclinum4         {font-size:92%; letter-spacing:0;}
+.eclinum5         {font-size:98%; letter-spacing:0;}
+.eclinum6         {font-size:93%; letter-spacing:0;text-transform:uppercase;}
+.url              {word-break:break-all; hyphens:none;}
+.disclaimer       {color:#111111;font-size:98%;line-height:125%;font-style:italic;}
+
+/* voor het wel of niet tonen van meer tekst */
+#uitknop, #myLinks, #C16b, #C16c {display:none;}
+
+.vid1          {margin:   7pt 6px      0 24px;color:#000000;font-size:14.0pt;line-height:120%;filter:url(#f3);z-index:1;font-weight:normal;
+                animation-name:lichter;animation-duration:1s;animation-fill-mode:forwards;}
+.vid2          {margin:   7pt 6px   12pt  6px;color:#000000;font-size:11.0pt;line-height:120%;z-index:1;
+                animation-name:lichter;animation-duration:1s;animation-fill-mode:forwards;hyphens:auto;}
+.vid3          {margin:   10pt 8px  10pt  8px;color:#000000;font-size:11.0pt;line-height:120%;hyphens:auto;}
+.vid1BOS       {margin:   7pt 6px      0  6px;color:#000000;font-size:14.0pt;line-height:110%;filter:url(#f3);z-index:1;font-weight:normal;
+                animation-name:lichter;animation-duration:1s;animation-fill-mode:forwards;text-indent:18px}
+.vid2BOS       {margin:   7pt 6px   12pt  6px;color:#000000;font-size:11.0pt;line-height:120%;z-index:1;
+                animation-name:lichter;animation-duration:1s;animation-fill-mode:forwards;hyphens:auto;}
+
+.mediastyle, .mediastylekop, .mediastylekopje {margin:10 8 10 8;font-size:11pt;line-height:120%;hyphens:auto;}
+.mediastylekop   {font-size:16.5pt;margin-top:10;hyphens:none;text-align:left;}
+.mediastylekopje {font-size:112%;margin-top:16px;font-style:italic;}
+.vid5          {margin:    7pt 5px   0pt  6px;color:#000000;font-size:11.0pt;line-height:120%;hyphens:auto;}
+.vid6, .vid7   {margin:    7pt 5px   0pt  6px;color:#000000;font-size:11.0pt;line-height:120%;hyphens:auto;}
+@keyframes lichter  {  0% {opacity:0;} 100% {opacity:1;}}
+@keyframes lichter2 {  0% {opacity:0;} 100% {opacity:0.8;}}
+
+/* voor de indeling in 4 blokken op rij */
+.column2       {float:left;width:50%;padding:0  4px 0    0;}
+.row2          {margin:0 -4px 0 0;}
+.card2A        {border-radius:12px;}
+.card2B        {border-radius:12px 12px 0 0;}
+.card2C        {border-radius:0 0 12px 12px;border-top:dashed 1px #668888;}
+.card3         {padding:12pt 0 11.5pt 0;text-align:center;}
+
+.cursor        {cursor:pointer;}
+.counterheader {color:#FAFAFA;font-size:21.0pt;line-height:100%;filter:url(#f3);letter-spacing:0.1px;margin-top:13px;}
+.countertext, .countertextL {color:#FAFAFA;font-size:13.0pt;line-height:120%;filter:url(#f3);letter-spacing:0.1px;margin-top:0px;}
+.countertextL  {font-size:15pt;}
+.counternote   {color:#FAFAFA;font-size:11.0pt;line-height:110%;margin-top:5px;margin-bottom:12px;font-style:italic;}
+
+/* voor het opschuiven van meer tekst */
+.langerC {animation-name:langerC;animation-duration:1.5s;animation-fill-mode:forwards;animation-timing-function:ease-in;}
+.korterC {animation-name:korterC;animation-duration:1s;  animation-fill-mode:forwards;animation-timing-function:ease-out;}
+@keyframes langerC {  0% {max-height:0;}
+                     99% {max-height:1000px;}
+                    100% {max-height:100%;}}
+@keyframes korterC {  0% {max-height:100%;}
+                      1% {max-height:1000px;}
+                    100% {max-height:0;}}
+.min                     {min-height:180px;max-height:180px;height:180px;}
+.minmax                  {min-height:180px;max-height:180px;overflow:hidden;}
+.minmax3                 {min-height:360px;max-height:360px;overflow:hidden;}
+.minmax2                 {min-height:28px;max-height:28px;min-width:160px;max-width:160px;overflow:hidden;vertical-align:middle;}
+
+/* voor de sprite met personen */
+.sprite                {background-image:url(../media/personenS.png);background-repeat:no-repeat;display:block;width:145px;height:145px;border:solid 3px #FAFAFA;border-radius:50%;transform:scale(.5);position:relative;top:-37.25px;left:-37.25px}
+.sprite-alsiadi        {background-position: -293px -1px;}
+.sprite-colakovic      {background-position:-1155px  1px;}
+.sprite-debruijne      {background-position: -363px  0px;}
+.sprite-diepeveen      {background-position: -440px -5px;}
+.sprite-flaticon       {background-position: -867px -4px;}
+.sprite-karabulut      {background-position:-1010px  0px;}
+.sprite-nuhanovic      {background-position:-1424px  0px;}
+.sprite-pronk          {background-position: -720px -1px;}
+.sprite-vangroenendaal {background-position:   -6px -1px;}
+.sprite-middelkoop     {background-position: -153px  3px;}
+.sprite-heij           {background-position: -583px -4px;}
+
+/* voor de sprite met icons */
+.icons {background-image:url(../media/icons-v31.png);background-repeat:no-repeat;display:block;width:145px;height:145px;border:solid 6px #FAFAFA;border-radius:50%;}
+.icons-31mag              {background-position:   -7px   -5px;}
+.icons-avaz               {background-position: -295px   -5px;}
+.icons-bannedbooks        {background-position: -299px -297px;}
+.icons-blauwhelm          {background-position:   -8px -149px;}
+.icons-hebban             {background-position:   -2px -299px;}
+.icons-jazeera            {background-position: -146px -299px;}
+.icons-nieuwerevu         {background-position:   -6px -442px;}
+.icons-rechtspraak        {background-position: -147px -442px;}
+.icons-vandiepen          {background-position: -443px -440px;}
+.icons-veteraneninstituut {background-position: -587px -145px;}
+.icons-volkskrant         {background-position: -736px -436px;}
+
+/* Voor breedtes op website */
+.breedte415D    {width:350px;height:194.44px;border-radius:3px;}
+.breedte415E    {width:340px;height:188.88px;border-radius:3px;}
+.breedte730B    {width:350px;max-width:350px;min-width:350px;}
+.breedte747     {width:340px;}
+.breedte794     {width:350px;}
+.vimeo          {border-radius:4px 4px 0 0;}
+.vimeo2         {margin-top:9px;}
+.Xstyle         {padding:3pt 0 22.5pt 0;}
+.Xspace         {font-size:14.5pt;}
+
+/* Voor de tijdlijn */
+.td1, .td2     {line-height:16pt;font-size:12pt;opacity:0;position:relative;top:0.7;}
+.td1           {margin:0 12pt 0 0;text-align:right;}
+.td2           {margin:0 0 0 12pt;}
+.stoplicht0             {opacity:0;animation:stop0 12s linear 1s infinite running forwards;}
+@keyframes stop0 {  10% {opacity:1;}
+                    72% {opacity:1;}
+                  88.5% {opacity:0;}}
+.stoplicht1A            {animation:stop1A 12s linear 1s infinite running forwards;}
+@keyframes stop1A {  4% {opacity:0;}
+                    10% {opacity:1;}
+                    75% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht1B            {animation:stop1B 12s linear 1s infinite running forwards;}
+@keyframes stop1B {  7% {opacity:0;}
+                    10% {opacity:1;}
+                    75% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht2A            {animation:stop2A 12s linear 1s infinite running forwards;}
+@keyframes stop2A { 15% {opacity:0;} 
+                    21% {opacity:1;}
+                    75% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht2B            {animation:stop2B 12s linear 1s infinite running forwards;}
+@keyframes stop2B { 18% {opacity:0;} 
+                    21% {opacity:1;}
+                    75% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht2C            {animation:stop2C 12s linear 1s infinite running forwards;}
+@keyframes stop2C { 20% {opacity:0;} 
+                    21% {opacity:1;}
+                    75% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht3A            {animation:stop3A 12s linear 1s infinite running forwards;}
+@keyframes stop3A { 28% {opacity:0;}
+                    34% {opacity:1;}
+                    75% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht3B            {animation:stop3B 12s linear 1s infinite running forwards;}
+@keyframes stop3B { 31% {opacity:0;}
+                    34% {opacity:1;}
+                    75% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht3C            {animation:stop3C 12s linear 1s infinite running forwards;}
+@keyframes stop3C { 33% {opacity:0;} 
+                    34% {opacity:1;}
+                    75% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht4A            {animation:stop4A 12s linear 1s infinite running forwards;}
+@keyframes stop4A { 40% {opacity:0;}
+                    46% {opacity:1;}
+                    75% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht4B            {animation:stop4B 12s linear 1s infinite running forwards;}
+@keyframes stop4B { 43% {opacity:0;}
+                    46% {opacity:1;}
+                    75% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht5A            {animation:stop5A 12s linear 1s infinite running forwards;}
+@keyframes stop5A { 52% {opacity:0;}
+                    58% {opacity:1;}
+                    75% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht5B            {animation:stop5B 12s linear 1s infinite running forwards;}
+@keyframes stop5B { 55% {opacity:0;}
+                    58% {opacity:1;}
+                    75% {opacity:1;}
+                   100% {opacity:0;}}
+.stoplicht6             {animation:stop5 12s linear 1s infinite running forwards;}
+@keyframes stop5 {  60% {stroke:#000000;}
+                 63.75% {stroke:#FAFAFA}
+                 71.25% {stroke:#FAFAFA}
+                  76.5% {stroke:#000000}}
+.stroke                 {stroke-width:0.5px;stroke:#000000;opacity:0;}
+.stroke2                {stroke-width:1px;stroke:black;fill:#323334;}
+.linestyle              {stroke:#000000;stroke-width:3;stroke-linecap:round;opacity:0;}
+.linestyle2             {stroke:#000000;stroke-width:3;stroke-linecap:round;}
+.path                   {opacity:0;stroke:#000000;stroke-width:2.5;fill:none;stroke-dasharray:116;stroke-dashoffset:116;animation:dash 12s linear 1s infinite running forwards;}
+@keyframes dash {
+    0% {opacity:0;}
+    6% {stroke-dashoffset:  98;opacity:1;}
+   12% {stroke-dashoffset:  98;}
+   18% {stroke-dashoffset:  77;}
+   24% {stroke-dashoffset:  77;}
+   30% {stroke-dashoffset:  56;}
+   36% {stroke-dashoffset:  56;}
+   42% {stroke-dashoffset:  35;}
+   48% {stroke-dashoffset:  35;}
+   54% {stroke-dashoffset:  14;}
+   60% {stroke-dashoffset:  14;}
+   66% {stroke-dashoffset:   0;opacity:1;}
+   88% {stroke-dashoffset:   0;opacity:0;}
+   89% {stroke-dashoffset: 116;}}
