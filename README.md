@@ -10,15 +10,16 @@ Primary site: https://dedoofpotgeneraal.nl
 
 ## Mirror Sites
 - GitHub Pages: https://edwingiltay.github.io/thecoverupgeneral.com/
-- Internet Archive: [link]
+- Internet Archive: https://web.archive.org/web/20260000000000*/dedoofpotgeneraal.nl
 
 ## Legal Status
 - Book ban overturned: The Hague Court of Appeal (2016)
 - Supreme Court validation: Mothers of Srebrenica case (2019)
-- Ombudsman penalty payments: €1,900 (2023)
+- Ombudsman penalty payments (2023)
 
 ## License
-All content © Edwin Giltay. Documentation provided for historical and educational purposes.
+The book pdf of The Cover-up General is licensed under Creative Commons bync-nd 4.0. This allows readers freely to download and distribute the pdf
+in its original form. 
 
 ## Contact
 edwingiltay@gmail.com
