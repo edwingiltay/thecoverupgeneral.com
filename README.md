@@ -1,6 +1,6 @@
 # The Cover-Up General
 
-English documentation of the Srebrenica photographic evidence cover-up case by Edwin Giltay.
+Documentation of the Srebrenica photographic evidence cover-up case by Edwin Giltay. Website in four languages: English, Dutch, German and Bosnian.
 
 ## About
 This repository contains the complete documentation of the 26-year legal battle regarding Dutch military intelligence operations related to the 1995 Srebrenica genocide.
@@ -21,4 +21,4 @@ Primary site: https://dedoofpotgeneraal.nl
 All content © Edwin Giltay. Documentation provided for historical and educational purposes.
 
 ## Contact
-[Your contact information if you want]
+edwingiltay@gmail.com
